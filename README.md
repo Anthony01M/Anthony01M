@@ -18,3 +18,8 @@
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=anthony01m&show_icons=true&locale=en" alt="anthony01m" /></p>
 
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=anthony01m&theme=default" alt="anthony01m" /></p>
+
+<h3 align="left"><a ref="https://wakatime.com/@Anthony01M">WakaTime</a></h3>
+
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
