@@ -22,4 +22,12 @@
 <h3 align="left"><a ref="https://wakatime.com/@Anthony01M">WakaTime</a></h3>
 
 <!--START_SECTION:waka-->
+
+```txt
+TypeScript   7 hrs 31 mins   ████████████████████████▓   98.78 %
+Text         3 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.67 %
+TSConfig     2 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.55 %
+Bash         0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
+```
+
 <!--END_SECTION:waka-->
