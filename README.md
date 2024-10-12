@@ -1,7 +1,7 @@
 <h1 align="center">Hi <img src="https://github.com/Anthony01M/Anthony01M/blob/main/wave-hello.gif" width="50px"> I'm Anthony M.</h1>
 <h3 align="center">A 22 years old developer from Lebanon</h3>
 
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=anthony01m" alt="anthony01m" /></a> </p>
+<p align="left"> <a href="https://anthony.sir.systems/"><img src="https://github-profile-trophy.vercel.app/?username=anthony01m" alt="anthony01m" /></a> </p>
 
 - 🔭 I’m currently working on [Berry Studios](https://github.com/orgs/Berry-Studios)
 
