@@ -3,8 +3,6 @@
 
 <p align="left"> <a href="https://anthony.sir.systems/"><img src="https://github-profile-trophy.vercel.app/?username=anthony01m" alt="anthony01m" /></a> </p>
 
-- 🔭 I’m currently working on [Berry Studios](https://github.com/orgs/Berry-Studios)
-
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://discord.gg/JgPqJqk" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/discord.svg" alt="JgPqJqk" height="30" width="40" /></a>
