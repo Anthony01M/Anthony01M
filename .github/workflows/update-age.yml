@@ -38,8 +38,7 @@ jobs:
 
       - name: Update README with current age
         run: |
-          # More specific replacement to avoid changing other numbers
-          sed -i 's/A \([0-9]\+\) years old developer from Lebanon/A '"${{ steps.age.outputs.age }}"' years old developer from Lebanon/g' README.md
+          sed -i "s/<span id=\"age\">[^<]*<\\/span>/<span id=\"age\">${{ steps.age.outputs.age }}<\\/span>/g" README.md
           echo "README updated with age: ${{ steps.age.outputs.age }}"
 
       - name: Commit and push if changed
