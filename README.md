@@ -1,5 +1,5 @@
 <h1 align="center">Hi <img src="https://github.com/Anthony01M/Anthony01M/blob/main/wave-hello.gif" width="50px"> I'm Anthony M.</h1>
-<h3 align="center">A <span id="age">...</span> years old developer from Lebanon</h3>
+<h3 align="center">A <span id="age">23</span> years old developer from Lebanon</h3>
 
 <p align="left"> <a href="https://anthony.sir.systems/"><img src="https://github-profile-trophy.vercel.app/?username=anthony01m" alt="anthony01m" /></a> </p>
 
