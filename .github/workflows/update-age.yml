@@ -1,0 +1,51 @@
+name: Update Age in README
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Calculate current age
+        id: age
+        run: |
+          BIRTH_YEAR=2002
+          BIRTH_MONTH=06
+          BIRTH_DAY=05
+          
+          CURRENT_YEAR=$(date +%Y)
+          CURRENT_MONTH=$(date +%m)
+          CURRENT_DAY=$(date +%d)
+          
+          AGE=$((CURRENT_YEAR - BIRTH_YEAR))
+          
+          # Check if birthday hasn't occurred yet this year
+          if [ $CURRENT_MONTH -lt $BIRTH_MONTH ] || \
+             ([ $CURRENT_MONTH -eq $BIRTH_MONTH ] && [ $CURRENT_DAY -lt $BIRTH_DAY ]); then
+            AGE=$((AGE - 1))
+          fi
+          
+          echo "age=$AGE" >> $GITHUB_OUTPUT
+          echo "Current age calculated: $AGE"
+
+      - name: Update README with current age
+        run: |
+          # More specific replacement to avoid changing other numbers
+          sed -i 's/A \([0-9]\+\) years old developer from Lebanon/A '"${{ steps.age.outputs.age }}"' years old developer from Lebanon/g' README.md
+          echo "README updated with age: ${{ steps.age.outputs.age }}"
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --staged --quiet && echo "No changes to commit" || git commit -m "docs: update age to ${{ steps.age.outputs.age }}"
+          git push
