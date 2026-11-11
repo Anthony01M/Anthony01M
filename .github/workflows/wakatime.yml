@@ -13,8 +13,12 @@ jobs:
     name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
-        with:
+      - name: Test WakaTime key
+        env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          TIME_RANGE: last_7_days
-          SHOW_TIME: true
+        run: |
+          echo "Key length: ${#WAKATIME_API_KEY}"
+          curl -s -o /dev/null -w "HTTP %{http_code}\n" \
+            -H "Authorization: Basic $(printf '%s' "$WAKATIME_API_KEY" | base64 -w0)" \
+            https://wakatime.com/api/v1/users/current/stats/last_7_days
+      - uses: athul/waka-readme@master
