@@ -6,19 +6,16 @@ on:
     - cron: "0 0 * * *"
 
 permissions:
-  contents: write   # <-- this is what's missing
+  contents: write
 
 jobs:
   update-readme:
     name: WakaReadme DevMetrics
     runs-on: ubuntu-latest
     steps:
-      - name: Test WakaTime key
-        env:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-        run: |
-          echo "Key length: ${#WAKATIME_API_KEY}"
-          curl -s -o /dev/null -w "HTTP %{http_code}\n" \
-            -H "Authorization: Basic $(printf '%s' "$WAKATIME_API_KEY" | base64 -w0)" \
-            https://wakatime.com/api/v1/users/current/stats/last_7_days
       - uses: athul/waka-readme@master
+        with:
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TIME_RANGE: last_7_days
+          SHOW_TIME: true
